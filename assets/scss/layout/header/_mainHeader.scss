@@ -1,0 +1,116 @@
+.mainHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  .mainHeader-nav {
+    display: flex;
+    font-family: $header-font-family;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    background-color: #f6eeee;
+    .mainHeader-nav-left-container {
+      flex: 2;
+      .mainHeader-nav-left-container-logoImg {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        height: 44px;
+        margin: 3px 5px;
+      }
+    }
+    .mainHeader-nav-center-container {
+      flex: 9;
+      width: 80%;
+      margin: auto 0;
+      ul {
+        margin: 0 auto;
+        padding: 0;
+        list-style-type: none;
+        text-align: center;
+        a {
+          font-size: 23px;
+          color: #0620aa;
+          text-decoration: none;
+          div {
+            float: left;
+            margin: 0 2%;
+            &:hover {
+              &::before {
+                content: "";
+                width: 100%;
+                height: 5px;
+                background-color: #0620aa;
+                float: left;
+                box-sizing: content-box;
+              }
+            }
+            &:active {
+              &::before {
+                content: "";
+                width: 100%;
+                height: 5px;
+                background-color: #ffffff;
+                float: left;
+                box-sizing: content-box;
+              }
+            }
+          }
+        }
+      }
+    }
+    .mainHeader-nav-right-container {
+      flex: 2;
+      .mainHeader-nav-right-container-box {
+        float: right;
+        background-image: url("../images/header/header-right-bg.png");
+        background-size: 267px 50px;
+        height: 50px;
+        width: 262px;
+        background-repeat: no-repeat;
+        .mainHeader-nav-right-container-box-storeImg {
+          width: 32px;
+          position: absolute;
+          top: 12px;
+          right: 100px;
+        }
+        .mainHeader-nav-right-container-box-userImg {
+          width: 40px;
+          position: absolute;
+          top: 6px;
+          right: 20px;
+        }
+      }
+    }
+  }
+  .mainHeader-line {
+    background-color: #b1b2b9;
+    position: absolute;
+    top: 50px;
+    height: 8px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .mainHeader-nav-center-container {
+    ul {
+      display: grid;
+      font-size: 10px;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+@media only screen and (min-width: 501px) {
+  .mainHeader-nav-center-container {
+    ul {
+      // display: grid;
+      // grid-template-rows: 1fr 1fr;
+      // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+}

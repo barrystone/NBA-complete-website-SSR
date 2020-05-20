@@ -1,0 +1,35 @@
+.TeamsDivNav-wrap {
+  // background-color: #bcf5a9;
+  background-color: #f6eeee;
+  ul {
+    // margin: 0;
+    padding: 0;
+    font-size: 12px;
+    text-align: center;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 25px;
+      div {
+        padding: 20px 0;
+        border: 1px black solid;
+        border-radius: 10px;
+        margin: 10px;
+      }
+    }
+  }
+  @media only screen and (max-width: 501px) {
+    ul {
+      font-size: 9px;
+    }
+  }
+  @media only screen and (min-width: 500px) {
+    ul {
+      font-size: 12px;
+    }
+  }
+}

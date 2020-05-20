@@ -1,0 +1,10 @@
+@mixin TeamsNav-box() {
+  @media screen and (max-width: 600px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media screen and (min-width: 600px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
