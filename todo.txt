@@ -1,0 +1,4 @@
+
+// loading npm packege
+    npm i @bit/akameco.styled-spinkit.wave-loading
+component link:https://bit.dev/akameco/styled-spinkit/wave-loading

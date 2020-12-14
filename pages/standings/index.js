@@ -3,16 +3,19 @@ import TeamsNav from "../../components/TeamsNav";
 import Teams from "../../components/Teams";
 import MainHeader from "../../components/layout/mainHeader";
 
+import { useSelector } from "react-redux";
+import WaveLoading from "@bit/akameco.styled-spinkit.wave-loading";
+
 const Standings = ({ data, divsData }) => {
+  const { loading } = useSelector((state) => state.loading);
+
   return (
     <React.Fragment>
       <header>
         <MainHeader />
         <TeamsNav divsData={divsData} />
       </header>
-      <main>
-        <Teams data={data} />
-      </main>
+      <main>{loading ? <WaveLoading /> : <Teams data={data} />}</main>
     </React.Fragment>
   );
 };

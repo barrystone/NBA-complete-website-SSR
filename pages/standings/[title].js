@@ -6,7 +6,12 @@ import MainHeader from "../../components/layout/mainHeader";
 import { useRouter } from "next/router";
 import fs from "fs";
 
+import { useSelector } from "react-redux";
+import WaveLoading from "@bit/akameco.styled-spinkit.wave-loading";
+
 const divPage = ({ data, divsData }) => {
+  const { loading } = useSelector((state) => state.loading);
+
   const router = useRouter();
   const { title } = router.query;
 
@@ -26,8 +31,14 @@ const divPage = ({ data, divsData }) => {
           <TeamsNav divsData={divsData} />
         </header>
         <main>
-          <div>{title}</div>
-          <TeamsDiv teams={teams} />
+          {loading ? (
+            <WaveLoading />
+          ) : (
+            <div>
+              <div>{title}</div>
+              <TeamsDiv teams={teams} />
+            </div>
+          )}
         </main>
       </React.Fragment>
     );
@@ -49,8 +60,14 @@ const divPage = ({ data, divsData }) => {
             <TeamsNav divsData={divsData} />
           </header>
           <main>
-            <div>{title}</div>
-            <TeamPage data={data} />
+            {loading ? (
+              <WaveLoading />
+            ) : (
+              <div>
+                <div>{title}</div>
+                <TeamPage data={data} />
+              </div>
+            )}
           </main>
         </React.Fragment>
       );

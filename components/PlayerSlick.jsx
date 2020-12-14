@@ -20,6 +20,7 @@ class PlayerSlick extends Component {
   slidePrevious = () => {
     this.slider.slickPrev();
   };
+
   render() {
     const images = [harden, curry, embiid, towns, james, lillard, love, lowry];
     const settings = {
