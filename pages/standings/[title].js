@@ -10,7 +10,7 @@ import { useSelector } from "react-redux";
 import WaveLoading from "@bit/akameco.styled-spinkit.wave-loading";
 
 const divPage = ({ data, divsData }) => {
-  const { loading } = useSelector((state) => state.loading);
+  const { routerLoading } = useSelector((state) => state.router);
 
   const router = useRouter();
   const { title } = router.query;
@@ -31,7 +31,7 @@ const divPage = ({ data, divsData }) => {
           <TeamsNav divsData={divsData} />
         </header>
         <main>
-          {loading ? (
+          {routerLoading ? (
             <WaveLoading />
           ) : (
             <div>
@@ -60,7 +60,7 @@ const divPage = ({ data, divsData }) => {
             <TeamsNav divsData={divsData} />
           </header>
           <main>
-            {loading ? (
+            {routerLoading ? (
               <WaveLoading />
             ) : (
               <div>
@@ -102,7 +102,7 @@ export async function getStaticProps({ params }) {
   const teamName = params.title;
   const api = {
     key: "bc5009f7498a4e8cac246d6fbdd34692",
-    base: "https://api.sportsdata.io/v3/nba/scores/json/Standings/2020",
+    base: "https://api.sportsdata.io/v3/nba/scores/json/Standings/2021",
   };
   const data = await fetch(`${api.base}?key=${api.key}`)
     .then((response) => response.json())

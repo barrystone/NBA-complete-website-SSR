@@ -1,6 +1,8 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import loadingReducer from "./loading";
+import routerReducer from "./router";
+import standingsReducer from "./standings";
 
 export default combineReducers({
-  loading: loadingReducer,
+  router: routerReducer,
+  standings: standingsReducer,
 });

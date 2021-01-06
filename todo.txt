@@ -1,3 +1,28 @@
+ // Debugging 
+    usedispatch(hook) in getStaticProps() won't work, i still finding the solution..
+
+    try mapStateToProp ==> stil don't know how to use that function(action) in getStaticToProps(), no way
+
+    above problem may not solve...
+
+    recommend to use
+    next-redux-wrapper
+
+    ----
+
+    why store/standing.js
+    getStandings custom action
+    cann't show the type name in redux dev tool (undefined) 
+
+    ----
+    pages/standings/index.js show some problem for redux applying, reload the page and data will show (useEfect),
+    and oposite not (router loading)?
+
+    pages/standings/[title].js not apply redux yet.
+
+    2021/1/6
+
+    ---
 
 // loading npm packege
     npm i @bit/akameco.styled-spinkit.wave-loading

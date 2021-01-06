@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import WaveLoading from "@bit/akameco.styled-spinkit.wave-loading";
 
 function App() {
-  const { loading } = useSelector((state) => state.loading);
+  const { routerLoading } = useSelector((state) => state.router);
 
   return (
     <React.Fragment>
@@ -13,7 +13,7 @@ function App() {
         <MainHeader />
       </header>
       <main>
-        {loading ? (
+        {routerLoading ? (
           // <Loading />
           <WaveLoading />
         ) : (
